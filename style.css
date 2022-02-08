@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Rubik;
+    background-color: var(--Very-dark-blue);
+    padding: 100px 20px;
+}
+
+.container {
+    margin: 0 auto;
+    /* width: 350px; */
+    max-width: 900px;
+    display: grid;
+    gap: 20px;
+    overflow: hidden;
+}
+
+section {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+section > div:nth-child(2) {
+    padding: 20px;
+}
+
+.user-content {
+    background-color: var(--Dark-blue);
+}
+
+.user-content  .user-top{
+    background-color: var(--Blue);
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.user-content .user-top h4 {
+    color: white;
+    font-weight: 300;
+    color: white;
+    font-size: 1.7rem;
+}
+
+.user-content .user-top h4 span {
+    font-size: 1rem;
+    color: var(--Pale-Blue);
+}
+
+.user-content .user-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 300;
+    color: var(--Pale-Blue)
+}
+
+.user-content .user-bottom p {
+    cursor: pointer;
+}
+
+.user-content .user-bottom p:hover {
+    color: white;
+}
+
+.avatar {
+    width: 50px;
+}
+
+.avatar img {
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.top {
+    width: 300px;
+    height: 40px;
+}
+
+.work {
+    background-color: var(--Light-red-work);
+    background-image: url("images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.play {
+    background-color: var(--Soft-blue-play);
+    background-image: url("images/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.study {
+    background-color: var(--Light-red-study);
+    background-image: url("images/icon-study.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.exercise {
+    background-color: var(--Lime-green-exercise);
+    background-image: url("images/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.social {
+    background-color: var(--Violet-social);
+    background-image: url("images/icon-social.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.self-care {
+    background-color: var(--Soft-orange-self-care);
+    background-image: url("images/icon-self-care.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.description h3 {
+    font-weight: 400;
+}
+
+.duration {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.duration h2 {
+    font-weight: 300;
+}
+
+.duration p {
+    font-weight: 300;
+    color: var(--Pale-Blue);
+}
+
+.bottom {
+    background-color: var(--Dark-blue);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.bottom:hover {
+    background-color: var(--Desaturated-blue);
+}
+
+@media (min-width:768px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .user-content {
+        grid-row: 1/3;
+    }
+
+    .user-content .user-top {
+        flex-direction: column;
+    }
+
+    .user-content .user-top .avatar {
+        align-self: flex-start;
+    }
+
+    .user-content .user-top h4 {
+        padding-right: 30px;
+        margin-bottom: 40px;
+    }
+
+    .user-content .user-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .duration {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .duration h2 {
+        font-size: 3rem;
+    }
+
+    .duration p {
+        font-size: 0.8rem;
+    }
+
+}
