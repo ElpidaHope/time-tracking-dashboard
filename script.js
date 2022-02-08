@@ -15,17 +15,30 @@ fetch(myRequest)
             daily.addEventListener("click", () => {
                 currentDuration[i].innerHTML = activity.timeframes.daily.current <= 1 ? `${activity.timeframes.daily.current}hr`: `${activity.timeframes.daily.current}hrs`;
                 
-                previousDuration[i].innerHTML = activity.timeframes.daily.previous <= 1 ? `Yesterday - ${activity.timeframes.daily.current}hr`: `Yesterday - ${activity.timeframes.daily.previous}hrs`; 
+                previousDuration[i].innerHTML = activity.timeframes.daily.previous <= 1 ? `Yesterday - ${activity.timeframes.daily.current}hr`: `Yesterday - ${activity.timeframes.daily.previous}hrs`;
+
+                daily.classList.add("active")
+                weekly.classList.remove("active")
+                monthly.classList.remove("active")
             })
 
             weekly.addEventListener("click", () => {
                 currentDuration[i].innerHTML = `${activity.timeframes.weekly.current}hrs`;
                 previousDuration[i].innerHTML = `Last Week - ${activity.timeframes.weekly.previous}hrs`;
+
+                daily.classList.remove("active")
+                weekly.classList.add("active")
+                monthly.classList.remove("active")
+                
             })
 
             monthly.addEventListener("click", () => {
                 currentDuration[i].innerHTML = `${activity.timeframes.monthly.current}hrs`;
                 previousDuration[i].innerHTML = `Last Month - ${activity.timeframes.monthly.previous}hrs`;
+                
+                daily.classList.remove("active")
+                weekly.classList.remove("active")
+                monthly.classList.add("active")
             })
             })
         })

@@ -81,6 +81,10 @@ section > div:nth-child(2) {
     cursor: pointer;
 }
 
+.user-content .user-bottom p.active {
+    color: white;
+}
+
 .user-content .user-bottom p:hover {
     color: white;
 }
